@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_item_title_attribute"
+            android:textColor="#444444"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:background="#DDDDDD" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/setting_select_fun_mode"
+            android:textSize="16sp" />
+
+        <com.arashivision.sdk.demo.view.FlowRadioGroup
+            android:id="@+id/rg_function_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_capture_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/setting_fun_mode_normal_capture" />
+
+            <RadioButton
+                android:id="@+id/rb_hdr_capturel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_fun_mode_capture" />
+
+            <RadioButton
+                android:id="@+id/rb_interval_shooting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_fun_mode_interval_shooting" />
+
+            <RadioButton
+                android:id="@+id/rb_night_scene"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_fun_mode_night_scene" />
+
+            <RadioButton
+                android:id="@+id/rb_burst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_fun_mode_burst" />
+
+            <RadioButton
+                android:id="@+id/rb_record_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_fun_mode_normal_record" />
+
+            <RadioButton
+                android:id="@+id/rb_hdr_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_fun_mode_hdr_record" />
+
+            <RadioButton
+                android:id="@+id/rb_bullet_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_fun_mode_bullet_time" />
+
+            <RadioButton
+                android:id="@+id/rb_timelapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_fun_mode_timelapse" />
+
+            <RadioButton
+                android:id="@+id/rb_timeshift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_fun_mode_timeshift" />
+        </com.arashivision.sdk.demo.view.FlowRadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_ev_value"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_ev_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/sb_ev"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                app:bsb_bubble_text_color="@color/colorPrimaryDark"
+                app:bsb_max="4"
+                app:bsb_min="-4"
+                app:bsb_show_progress_in_float="true"
+                app:bsb_show_section_text="true"
+                app:bsb_show_thumb_text="true" />
+
+            <Button
+                android:id="@+id/btn_set_ev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_apply" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_exposure_mode"
+                android:textSize="16sp" />
+
+            <com.arashivision.sdk.demo.view.FlowRadioGroup
+                android:id="@+id/rg_exposure_mode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:id="@+id/rb_exposure_auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_exposure_mode_auto" />
+
+                <RadioButton
+                    android:id="@+id/rb_exposure_iso_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_exposure_mode_iso_first" />
+
+                <RadioButton
+                    android:id="@+id/rb_exposure_shutter_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_exposure_mode_shutter_first" />
+
+                <RadioButton
+                    android:id="@+id/rb_exposure_manual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_exposure_mode_manual" />
+            </com.arashivision.sdk.demo.view.FlowRadioGroup>
+
+            <Button
+                android:id="@+id/btn_set_exposure_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_apply" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_iso"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_iso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btn_set_iso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/setting_apply" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_iso_top_limit"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_iso_top_limit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btn_set_iso_top_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/setting_apply" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_shutter_mode"
+                android:textSize="16sp" />
+
+            <com.arashivision.sdk.demo.view.FlowRadioGroup
+                android:id="@+id/rg_shutter_mode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:id="@+id/rb_shutter_mode_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_shutter_mode_off" />
+
+                <RadioButton
+                    android:id="@+id/rb_shutter_mode_sport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_shutter_mode_sport" />
+
+                <RadioButton
+                    android:id="@+id/rb_shutter_mode_faster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_shutter_mode_faster" />
+            </com.arashivision.sdk.demo.view.FlowRadioGroup>
+
+            <Button
+                android:id="@+id/btn_set_shutter_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/setting_apply" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_shutter_speed"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_shutter_speed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btn_set_shutter_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/setting_apply" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_wb"
+                android:textSize="16sp" />
+
+            <com.arashivision.sdk.demo.view.FlowRadioGroup
+                android:id="@+id/rg_wb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:id="@+id/rb_wb_auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_wb_auto" />
+
+                <RadioButton
+                    android:id="@+id/rb_wb_2700k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_wb_2700k" />
+
+                <RadioButton
+                    android:id="@+id/rb_wb_4000k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_wb_4000k" />
+                <RadioButton
+                    android:id="@+id/rb_wb_5000k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_wb_5000k" />
+                <RadioButton
+                    android:id="@+id/rb_wb_6500k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_wb_6500k" />
+                <RadioButton
+                    android:id="@+id/rb_wb_7500k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_wb_7500k" />
+            </com.arashivision.sdk.demo.view.FlowRadioGroup>
+
+            <Button
+                android:id="@+id/btn_set_wb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/setting_apply" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/setting_item_title_other"
+            android:textColor="#444444"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:background="#DDDDDD" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_camera_beep"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_camera_beep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_calibrate_gyro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/setting_calibrate_gyro" />
+
+        <Button
+            android:id="@+id/btn_format_storage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/setting_format_sd" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

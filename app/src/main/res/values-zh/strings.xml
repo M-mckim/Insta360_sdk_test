@@ -1,0 +1,280 @@
+<resources>
+    <string name="app_name">SDK_Demo</string>
+
+    <!-- Main Activity -->
+    <string name="main_toolbar_title">SDK DEMO</string>
+    <string name="main_full_demo_button">整体示例</string>
+    <string name="main_full_demo_desc">演示连接相机、获取监听SD卡/电量状态、开启预览、录像/拍照/直播整体流程</string>
+    <string name="main_item_desc_connect">连接/断开相机</string>
+    <string name="main_connect_wifi_button">WIFI连接</string>
+    <string name="main_connect_usb_button">USB连接</string>
+    <string name="main_connect_ble_button">蓝牙连接</string>
+    <string name="main_disconnect_button">断开连接</string>
+    <string name="main_item_desc_camera_fun">相机功能 -- 需要连接相机后使用</string>
+    <string name="main_capture_button">拍摄</string>
+    <string name="main_capture_desc">普通拍照/录像、HDR拍照/录像、间隔拍照/延时摄影等拍摄功能</string>
+    <string name="main_preview_button">预览</string>
+    <string name="main_preview_desc">正常模式，可切换画面比例、调整视角、全景与平铺</string>
+    <string name="main_preview2_button">预览2</string>
+    <string name="main_preview2_desc">自定义SurfaceView</string>
+    <string name="main_preview3_button">预览3</string>
+    <string name="main_preview3_desc">用ImageReader获取Bitmap</string>
+    <string name="main_live_button">直播</string>
+    <string name="main_live_desc">需使用连接线，可自定义推流参数、全景/录屏模式</string>
+    <string name="main_osc_button">OSC</string>
+    <string name="main_osc_desc">OSC协议控制相机，可脱离sdk使用，更多详情请参考谷歌文档</string>
+    <string name="main_setting_button">相机设置</string>
+    <string name="main_setting_desc">包含EV值、提示音开关、陀螺仪矫正、格式化SD卡等</string>
+    <string name="main_item_desc_other">其他</string>
+    <string name="main_camera_file_button">相机文件列表</string>
+    <string name="main_camera_file_desc">扫描相机全部文件</string>
+    <string name="main_play_button">播放 &amp; 导出</string>
+    <string name="main_play_desc">演示播放和导出视频/图片（全景/缩略图），本地/相机文件皆可</string>
+    <string name="main_stitch_button">HDR合成</string>
+    <string name="main_stitch_desc">演示HDR合成及播放，只能合成本地图片，需先从相机下载到手机</string>
+    <string name="main_fw_upgrade_button">固件升级</string>
+    <string name="main_fw_upgrade_desc">上传固件升级包(.bin文件)到相机进行升级</string>
+    <string name="main_toast_camera_connected">相机已连接</string>
+    <string name="main_toast_camera_disconnected">相机连接断开</string>
+    <string name="main_toast_camera_connect_error">相机连接失败 %d</string>
+    <string name="main_toast_sd_enabled">SD卡可用</string>
+    <string name="main_toast_sd_disabled">SD卡异常</string>
+
+    <!-- Ble Activity -->
+    <string name="ble_toolbar_title">蓝牙扫描与连接</string>
+    <string name="ble_prompt_permission">兼容性适配：部分设备需要授予位置权限和开启GPS定位才可扫描到蓝牙，请根据产品适配需求自行处理。\n\n注意事项：切忌短时间内频繁重新发起扫描，安卓系统有30s内5次扫描的限制，扫描过于频繁会出现扫描发起成功但搜索不到设备的情况。</string>
+    <string name="ble_state_start_scan">开始扫描</string>
+    <string name="ble_state_start_failed">扫描失败</string>
+    <string name="ble_state_scanning">扫描中...</string>
+    <string name="ble_state_scan_finish">扫描结束</string>
+    <string name="ble_state_connecting">相机连接中</string>
+
+    <!-- Full Demo Activity -->
+    <string name="full_demo_sd_remaining_space">SD卡：剩余%s</string>
+    <string name="full_demo_sd_error">SD卡：未插入或剩余空间不足</string>
+    <string name="full_demo_battery_level">电量：%d%%</string>
+    <string name="full_demo_charging">充电中</string>
+    <string name="full_demo_record">录像</string>
+    <string name="full_demo_capture">拍照</string>
+    <string name="full_demo_live">直播</string>
+    <string name="full_demo_start">开始</string>
+    <string name="full_demo_stop">停止</string>
+    <string name="full_demo_prompt_connect_camera">请先连接相机</string>
+    <string name="full_demo_connect_by_wifi">WIFI连接</string>
+    <string name="full_demo_connect_by_usb">USB连接</string>
+    <string name="full_demo_live_start">直播开始</string>
+    <string name="full_demo_live_error">直播错误</string>
+
+    <!-- Capture Activity -->
+    <string name="capture_toolbar_title">拍摄与监听</string>
+    <string name="capture_prompt_nanos_osc">注意：Nanos相机不支持此页API，需使用OSC协议控制相机，详情参考OscActivity</string>
+    <string name="capture_switch_panorama_sensor">全景镜头</string>
+    <string name="capture_switch_front_sensor">广角镜头-前</string>
+    <string name="capture_switch_rear_sensor">广角镜头-后</string>
+    <string name="capture_switch_sensor_ing">切换镜头中</string>
+    <string name="capture_switch_sensor_success">切换成功</string>
+    <string name="capture_switch_sensor_failed">切换失败</string>
+    <string name="capture_switch_sensor_camera_connect_error">相机未连接</string>
+    <string name="capture_normal_capture">普通拍照</string>
+    <string name="capture_normal_capture_pure_shot">普通拍照 (PureShot)</string>
+    <string name="capture_normal_pano_capture">Insta Pano模式 普通拍照</string>
+    <string name="capture_hdr_capture">HDR拍照</string>
+    <string name="capture_hdr_pano_capture">Insta Pano模式 HDR拍照</string>
+    <string name="capture_interval_shooting_start">开始间隔拍照</string>
+    <string name="capture_interval_shooting_stop">停止间隔拍照</string>
+    <string name="capture_normal_record_start">开始普通录像</string>
+    <string name="capture_normal_record_stop">停止普通录像</string>
+    <string name="capture_hdr_record_start">开始HDR录像</string>
+    <string name="capture_hdr_record_stop">停止HDR录像</string>
+    <string name="capture_timelapse_start">开始延时摄影</string>
+    <string name="capture_timelapse_stop">停止延时摄影</string>
+    <string name="capture_capture_starting">准备拍摄...</string>
+    <string name="capture_capture_working">拍摄中...</string>
+    <string name="capture_capture_stopping">正在保存文件...</string>
+    <string name="capture_capture_finished">拍摄完成</string>
+    <string name="capture_capture_time">拍摄时长: %s</string>
+    <string name="capture_capture_count">拍摄数量: %d</string>
+    <string name="capture_play_camera_file">播放相机远程文件</string>
+    <string name="capture_play_local_file">下载并播放本地文件</string>
+    <string name="capture_toast_sd_card_error">未插入存储卡或剩余空间不足</string>
+
+    <!-- Preview Activity -->
+    <string name="preview_toolbar_title">预览 -- 正常模式</string>
+    <string name="preview_angle">预览视角：</string>
+    <string name="preview_mode_normal">普通</string>
+    <string name="preview_mode_fisheye">鱼眼</string>
+    <string name="preview_mode_perspective">透视</string>
+    <string name="preview_mode_plane">平铺</string>
+    <string name="stab_type">防抖类型：</string>
+    <string name="stab_type_auto">自适应防抖</string>
+    <string name="stab_type_panorama">全景防抖</string>
+    <string name="stab_type_calibrate_horizon">只矫正地平线</string>
+    <string name="stab_type_footage_motion_smooth">镜头运动平滑, 不校准地平线</string>
+    <string name="stab_type_off">关闭防抖</string>
+    <string name="choose_resolution">分辨率选择：</string>
+
+    <!-- Preview2 Activity -->
+    <string name="preview2_toolbar_title">预览 -- 自定义SurfaceView</string>
+    <string name="preview2_show">显示</string>
+    <string name="preview2_hide">隐藏</string>
+
+    <!-- Preview3 Activity -->
+    <string name="preview3_toolbar_title">预览 -- ImageReader获取Bitmap</string>
+
+    <!-- Live Activity -->
+    <string name="live_toolbar_title">直播功能</string>
+    <string name="live_paramter_rtmp">RTMP地址:</string>
+    <string name="live_paramter_width">推流宽度:</string>
+    <string name="live_paramter_height">推流高度:</string>
+    <string name="live_paramter_fps">推流帧率:</string>
+    <string name="live_paramter_bitrate">推流比特率:</string>
+    <string name="live_paramter_panorama">是否全景</string>
+    <string name="live_paramter_audio_enabled">开启音频</string>
+    <string name="live_start_live">开始直播</string>
+    <string name="live_stop_live">停止直播</string>
+    <string name="live_push_started">直播推流开始</string>
+    <string name="live_push_finished">直播推流结束</string>
+    <string name="live_push_error">直播推流异常</string>
+    <string name="live_fps_update">直播中...  FPS: %d</string>
+    <string name="live_toast_input_parameters">请填全推流参数</string>
+    <string name="live_toast_invalid_rtmp">Rtmp地址不合法</string>
+    <string name="live_bind_mobile_network_desc">绑定移动网络则可在使用WIFI连接相机的同时用4G上网，以便于直播推流</string>
+    <string name="live_bind">绑定</string>
+    <string name="live_unbind">解绑</string>
+    <string name="live_toast_bind_mobile_network_successful">绑定移动网络成功</string>
+    <string name="live_toast_bind_mobile_network_failed">绑定移动网络失败</string>
+    <string name="live_toast_unbind_mobile_network">解除绑定移动网络</string>
+    <string name="live_toast_unbind_mobile_network_when_lost">移动网络丢失，临时解绑</string>
+
+    <!-- OSC Activity -->
+    <string name="osc_toolbar_title">OSC</string>
+    <string name="osc_support_options">支持的Options参数</string>
+    <string name="osc_take_picture">HDR拍照</string>
+    <string name="osc_take_picture_device_stitching">HDR拍照(机内拼接)</string>
+    <string name="osc_start_record">开始录像</string>
+    <string name="osc_stop_record">停止录像</string>
+    <string name="osc_get_exposure_params">获取曝光参数</string>
+    <string name="osc_switch_front_sensor_capture">前镜头拍照</string>
+    <string name="osc_switch_rear_sensor_capture">后镜头拍照</string>
+    <string name="osc_separated_fisheye_stitch">拼接俩单鱼眼</string>
+    <string name="osc_dialog_title_send_request">发送请求</string>
+    <string name="osc_dialog_msg_send_request">发送请求中，请稍后...</string>
+    <string name="osc_dialog_title_success">成功</string>
+    <string name="osc_dialog_msg_no_data">无返回数据</string>
+    <string name="osc_dialog_title_failed">失败</string>
+    <string name="osc_dialog_title_downloading">下载远程文件</string>
+    <string name="osc_dialog_msg_downloading">"总数 %1$d, 成功 %2$d, 失败 %3$d</string>
+    <string name="osc_toast_connect_camera">请先连接相机</string>
+    <string name="osc_toast_get_exposure_params">请先获取曝光参数</string>
+    <string name="osc_toast_capture_front_sensor">请拍摄前镜头照片</string>
+    <string name="osc_toast_capture_rear_sensor">请拍摄后镜头照片</string>
+    <string name="osc_exposure_params">曝光参数: %s</string>
+    <string name="osc_front_path">前镜头文件路径: %s</string>
+    <string name="osc_rear_path">后镜头文件路径: %s</string>
+    <string name="osc_stitch_path">拼接输出文件路径: %s</string>
+
+    <!-- More Setting Activity -->
+    <string name="setting_toolbar_title">相机设置</string>
+    <string name="setting_item_title_attribute">3A参数设置</string>
+    <string name="setting_item_title_other">其他设置</string>
+    <string name="setting_fun_mode_normal_capture">普通拍照</string>
+    <string name="setting_fun_mode_capture">HDR拍照</string>
+    <string name="setting_fun_mode_interval_shooting">间隔拍照</string>
+    <string name="setting_fun_mode_night_scene">超级夜景</string>
+    <string name="setting_fun_mode_burst">连拍</string>
+    <string name="setting_fun_mode_normal_record">普通录像</string>
+    <string name="setting_fun_mode_hdr_record">HDR录像</string>
+    <string name="setting_fun_mode_bullet_time">子弹时间</string>
+    <string name="setting_fun_mode_timelapse">延时摄影</string>
+    <string name="setting_fun_mode_timeshift">移动延时</string>
+    <string name="setting_select_fun_mode">设置参数时请先选择拍摄模式: </string>
+    <string name="setting_ev_value">EV值: </string>
+    <string name="setting_exposure_mode">曝光模式: </string>
+    <string name="setting_exposure_mode_auto">自动</string>
+    <string name="setting_exposure_mode_iso_first">ISO优先</string>
+    <string name="setting_exposure_mode_shutter_first">快门优先</string>
+    <string name="setting_exposure_mode_manual">手动</string>
+    <string name="setting_iso">ISO: </string>
+    <string name="setting_iso_top_limit">ISO上限: </string>
+    <string name="setting_shutter_mode">快门模式: </string>
+    <string name="setting_shutter_mode_off">关闭</string>
+    <string name="setting_shutter_mode_sport">室内暗光防抖</string>
+    <string name="setting_shutter_mode_faster">快速</string>
+    <string name="setting_shutter_speed">快门速度(秒): </string>
+    <string name="setting_wb">白平衡: </string>
+    <string name="setting_wb_auto">自动</string>
+    <string name="setting_wb_2700k">2700K</string>
+    <string name="setting_wb_4000k">4000K</string>
+    <string name="setting_wb_5000k">5000K</string>
+    <string name="setting_wb_6500k">6500K</string>
+    <string name="setting_wb_7500k">7500K</string>
+    <string name="setting_apply">应用</string>
+    <string name="setting_camera_beep">相机提示音: </string>
+    <string name="setting_calibrate_gyro">陀螺仪矫正</string>
+    <string name="setting_format_sd">格式化SD卡</string>
+    <string name="setting_dialog_msg_gyro_calirate_prompt">矫正前请先将相机竖直放置在平稳的表面上</string>
+    <string name="setting_dialog_msg_gyro_calirating">陀螺仪矫正中...</string>
+    <string name="setting_dialog_msg_gyro_calirate_success">陀螺仪矫正成功</string>
+    <string name="setting_dialog_msg_gyro_calirate_failed">陀螺仪矫正失败</string>
+    <string name="setting_dialog_msg_format_prompt">确认要格式化SD卡？</string>
+    <string name="setting_dialog_msg_formatting">格式化中...</string>
+    <string name="setting_dialog_msg_format_success">格式化成功</string>
+    <string name="setting_dialog_msg_format_failed">格式化失败</string>
+    <string name="setting_dialog_msg_camera_connect_error">请先用WIFI连接相机</string>
+    <string name="setting_dialog_cancel">取消</string>
+    <string name="setting_dialog_start">开始</string>
+    <string name="setting_dialog_sure">确认</string>
+    <string name="setting_dialog_ok">OK</string>
+
+    <!-- Camera Files Activity -->
+    <string name="camera_files_toolbar_title">扫描全部相机文件</string>
+    <string name="camera_files_all">全部</string>
+    <string name="camera_files_image">图片</string>
+    <string name="camera_files_video">视频</string>
+    <string name="camera_files_operate_desc">单击播放，长按删除</string>
+    <string name="camera_files_toast_success">删除成功</string>
+    <string name="camera_files_toast_fail">删除失败</string>
+
+    <!-- Stitch Activity -->
+    <string name="stitch_toolbar_title">HDR合成</string>
+    <string name="stitch_original">原图效果</string>
+    <string name="stitch_hdr">HDR合成效果</string>
+
+    <!-- Play And Export Activity -->
+    <string name="play_toolbar_title">播放和导出</string>
+    <string name="play_export_original">导出全景</string>
+    <string name="play_export_thumbnail">导出缩略图</string>
+    <string name="play_hdr_stitch">HDR合成</string>
+    <string name="play_pure_shot_stitch">PureShot合成</string>
+    <string name="play_original">显示原图</string>
+    <string name="play_toast_empty_path">文件路径为空</string>
+    <string name="play_toast_download_first">请先从相机下载文件到本地</string>
+    <string name="play_toast_not_hdr">不是HDR图片，无法合成</string>
+    <string name="play_toast_not_pure_shot">不是PureShot图片，无法合成</string>
+    <string name="play_toast_load_finish">加载完成</string>
+    <string name="play_toast_fail_desc">失败(%d)  %s</string>
+    <string name="export_dialog_msg_exporting">正在导出中...</string>
+    <string name="export_dialog_msg_export_success">导出成功\n文件保存路径为: %s</string>
+    <string name="export_dialog_msg_export_failed">导出失败(%d)</string>
+    <string name="export_dialog_msg_export_stopped">导出已停止</string>
+    <string name="export_dialog_msg_export_progress">导出进度： %s</string>
+    <string name="export_dialog_msg_stitching">正在拼接...</string>
+    <string name="export_dialog_msg_hdr_stitching">正在合成HDR...</string>
+    <string name="export_dialog_msg_hdr_stitch_error">HDR合成失败</string>
+    <string name="export_dialog_msg_pure_shot_stitching">正在合成PureShot...</string>
+    <string name="export_dialog_msg_pure_shot_stitch_error">PureShot合成失败  %d</string>
+    <string name="export_dialog_stop">停止</string>
+    <string name="export_dialog_ok">OK</string>
+
+    <!-- Firmware Upgrade Activity -->
+    <string name="fw_toolbar_title">固件升级</string>
+    <string name="fw_prompt">注意：请不要上传错误文件到相机，以免出现变砖的情况。例：不要上传OneX的固件升级包到OneX2相机。</string>
+    <string name="fw_choose_file">选择固件升级文件</string>
+    <string name="fw_file_path">文件路径：%s</string>
+    <string name="fw_start_upgrade">开始上传</string>
+    <string name="fw_upgrade_success">上传成功，等待相机升级重启</string>
+    <string name="fw_upgrade_fail">上传失败，错误码：%1$d，异常信息：%2$s</string>
+    <string name="fw_upgrade_cancel">上传被取消</string>
+    <string name="fw_upgrade_progress">上传进度：%s</string>
+    <string name="fw_toast_choose_file">请先选择要上传的固件文件</string>
+</resources>

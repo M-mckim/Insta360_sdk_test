@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/osc/info"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/osc/state"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_get_support_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/osc_support_options"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_take_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/osc_take_picture"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_take_picture_device_stitching"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/osc_take_picture_device_stitching"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_start_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/osc_start_record"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_stop_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/osc_stop_record"
+        android:textAllCaps="false" />
+
+    <LinearLayout
+        android:id="@+id/layout_separated_fisheye_stitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_get_exposure_params"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="100dp"
+            android:text="@string/osc_get_exposure_params"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_switch_front_sensor_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="100dp"
+            android:text="@string/osc_switch_front_sensor_capture"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_switch_rear_sensor_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="100dp"
+            android:text="@string/osc_switch_rear_sensor_capture"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_separated_fisheye_stitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="100dp"
+            android:text="@string/osc_separated_fisheye_stitch"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_exposure_params"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        tools:text="Exposure Params" />
+
+    <TextView
+        android:id="@+id/tv_fornt_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        tools:text="front path" />
+
+    <TextView
+        android:id="@+id/tv_rear_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        tools:text="rear path" />
+
+    <TextView
+        android:id="@+id/tv_stitch_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        tools:text="stitch path" />
+
+</LinearLayout>

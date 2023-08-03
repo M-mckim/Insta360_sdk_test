@@ -1,0 +1,1 @@
+SDK说明文档：https://github.com/Insta360Develop/CameraSDK-Android
