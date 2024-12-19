@@ -9,6 +9,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.Process;
 import android.preference.PreferenceManager;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
@@ -483,11 +484,9 @@ public class LiveActivity extends BaseObserveCameraActivity implements IPreviewS
                 .setStabType(getStabType())
                 .setStabEnabled(mSpinnerStabType.getSelectedItemPosition() != 4)
                 .setLive(true)
-                .setResolutionParams(mCurrentResolution.width, mCurrentResolution.height, mCurrentResolution.fps);
-
-        builder.setRenderModelType(CaptureParamsBuilder.RENDER_MODE_PLANE_STITCH)
-                .setCameraRenderSurfaceInfo(mImageReader.getSurface(), mImageReader.getWidth(), mImageReader.getHeight())
-                .setScreenRatio(1, 1);
+                .setResolutionParams(mCurrentResolution.width, mCurrentResolution.height, mCurrentResolution.fps)
+                .setRenderModelType(CaptureParamsBuilder.RENDER_MODE_PLANE_STITCH)
+                .setCameraRenderSurfaceInfo(mImageReader.getSurface(), mImageReader.getWidth(), mImageReader.getHeight());
 
         return builder;
     }
@@ -568,7 +567,7 @@ public class LiveActivity extends BaseObserveCameraActivity implements IPreviewS
 
         File dir = new File(getExternalCacheDir(), "preview_jpg");
         dir.mkdirs();
-        mImageReaderHandlerThread = new HandlerThread("camera render surface");
+        mImageReaderHandlerThread = new HandlerThread("camera render surface", Process.THREAD_PRIORITY_BACKGROUND);
         mImageReaderHandlerThread.start();
 
         mImageReaderHandler = new Handler(mImageReaderHandlerThread.getLooper());
@@ -580,6 +579,7 @@ public class LiveActivity extends BaseObserveCameraActivity implements IPreviewS
             @Override
             public void onImageAvailable(ImageReader reader) {
                 Image image = reader.acquireLatestImage();
+                long startTime = System.nanoTime();
                 Log.i(TAG, "image format " + image.getFormat()
                         + " getWidth " + image.getWidth()
                         + " get height " + image.getHeight()
@@ -1083,7 +1083,8 @@ public class LiveActivity extends BaseObserveCameraActivity implements IPreviewS
         public class SendOfferTask extends AsyncTask<Void, Void, String> {
 
             private static final String TAG = "SendOfferTask";
-            private static final String TARGET_URL = "https://a0b4-165-132-140-76.ngrok-free.app/offer"; // 대상 URL
+//            private static final String TARGET_URL = "https://165.132.140.76:18498/offer"; // 대상 URL
+            private static final String TARGET_URL = "https://d5ff-165-132-140-76.ngrok-free.app/offer"; // 대상 URL
 
             private String localSDP;
             private int peerNum;

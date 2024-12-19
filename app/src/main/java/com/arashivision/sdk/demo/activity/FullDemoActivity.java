@@ -379,8 +379,8 @@ public class FullDemoActivity extends AppCompatActivity implements ICameraChange
     private LiveParamsBuilder createLiveParams() {
         return new LiveParamsBuilder()
                 .setRtmp("rtmp://txy.live-send.acg.tv/live-txy/?streamname=live_23968708_6785332&key=6abecd453e112c38f190f69fabc6d3da")
-                .setWidth(1440)
-                .setHeight(720)
+                .setWidth(720)//1440
+                .setHeight(360)//720
                 .setFps(30)
                 .setBitrate(2 * 1024 * 1024)
                 .setPanorama(true)

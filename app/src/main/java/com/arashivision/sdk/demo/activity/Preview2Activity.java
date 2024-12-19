@@ -1,6 +1,7 @@
 package com.arashivision.sdk.demo.activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.SurfaceView;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -115,6 +116,9 @@ public class Preview2Activity extends BaseObserveCameraActivity implements IPrev
                 .setGyroTimeStamp(InstaCameraManager.getInstance().getGyroTimeStamp())
                 .setBatteryType(InstaCameraManager.getInstance().getBatteryType())
                 .setCameraRenderSurfaceInfo(mSurfaceView.getHolder().getSurface(), mSurfaceView.getWidth(), mSurfaceView.getHeight());
+        Log.d("RESOLUTION TEST", "Captured RESOLUTION! Width: " + builder.getWidth());
+
+
         return builder;
     }
 

@@ -120,7 +120,10 @@ public class Preview3Activity extends BaseObserveCameraActivity implements IPrev
                 .setCameraSelfie(InstaCameraManager.getInstance().isCameraSelfie())
                 .setGyroTimeStamp(InstaCameraManager.getInstance().getGyroTimeStamp())
                 .setBatteryType(InstaCameraManager.getInstance().getBatteryType())
+//                .setResolutionParams(3840, 1920, 30)
                 .setCameraRenderSurfaceInfo(mImageReader.getSurface(), mImageReader.getWidth(), mImageReader.getHeight());
+        Log.d(TAG, "Captured RESOLUTION!: " + builder.getWidth());
+        Log.d(TAG, "Captured RESOLUTION!: " + mImageReader.getWidth());
         return builder;
     }
 
@@ -135,7 +138,8 @@ public class Preview3Activity extends BaseObserveCameraActivity implements IPrev
         mImageReaderHandlerThread.start();
 
         mImageReaderHandler = new Handler(mImageReaderHandlerThread.getLooper());
-        mImageReader = ImageReader.newInstance(mCapturePlayerView.getWidth(), mCapturePlayerView.getHeight(), PixelFormat.RGBA_8888, 1);
+//        mImageReader = ImageReader.newInstance(mCapturePlayerView.getWidth(), mCapturePlayerView.getHeight(), PixelFormat.RGBA_8888, 1);
+        mImageReader = ImageReader.newInstance(3840, 1920, PixelFormat.RGBA_8888, 1);
 
         mImageReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
             @Override
